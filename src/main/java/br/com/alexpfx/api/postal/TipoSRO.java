@@ -207,7 +207,7 @@ public enum TipoSRO {
             return DM;
         }
         for (TipoSRO tipo : values()) {
-            if (tipo.codigo == codigo) {
+            if (tipo.codigo.equals(codigo)) {
                 return tipo;
             }
         }

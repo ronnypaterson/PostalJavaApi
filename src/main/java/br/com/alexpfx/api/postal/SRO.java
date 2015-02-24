@@ -1,5 +1,7 @@
 package br.com.alexpfx.api.postal;
 
+import org.apache.commons.lang3.StringUtils;
+
 /**
  * Created by alex on 22/02/2015.
  */
@@ -16,10 +18,41 @@ public class SRO {
         this.digitoVerificador = digitoVerificador;
     }
 
-    public void validarDigitoVerificador() throws SROInvalidoException{
+    public boolean isValid() throws SROInvalidoException{
+        return digitoVerificador.equals(calcularDv());
+    }
+    public int calcularDv (){
+        int [] fatores = new int [] {8,6,4,2,3,5,9,7};
+        int [] ia = toIntArray(getNumero(), 8);
+        int soma = 0;
+        for (int i = 0; i < fatores.length; i++){
+            int m = fatores [i] * ia [i];
+            soma += m;
+        }
+        int div = (soma % 11);
+        if (div == 0) {
+            return 5;
+        }
+        if (div == 1){
+            return 0;
+        }
+        return 11 - div;
+    }
 
 
+    private int [] toIntArray (int n, int minSize){
 
+        String s = StringUtils.leftPad(String.valueOf(n), minSize, '0');
+        int c = 0;
+        int [] ar = new int [s.length()];
+        for (char ch:s.toCharArray()){
+            ar [c++] = ch - '0';
+        }
+        return ar;
+    }
+
+    public Integer getDigitoVerificador() {
+        return digitoVerificador;
     }
 
     public TipoSRO getCodigoServico() {

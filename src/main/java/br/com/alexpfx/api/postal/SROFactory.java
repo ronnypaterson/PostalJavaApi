@@ -30,7 +30,7 @@ public class SROFactory {
 
     private Integer obterDv (String sro){
         try {
-            return Integer.valueOf(sro.substring(10, 12));
+            return Integer.valueOf(sro.substring(10, 11));
         } catch (NumberFormatException e) {
             throw new SROInvalidoException("numero com formato invalido");
         }
@@ -49,9 +49,9 @@ public class SROFactory {
     }
 
     public SRO criar(String codigoServico) {
-
         return criarSROValidado(codigoServico);
-
     }
+
+
 
 }
