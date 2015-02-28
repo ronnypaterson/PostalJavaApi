@@ -3,10 +3,10 @@ package br.com.alexpfx.api.postal;
 /**
  * Created by alex on 22/02/2015.
  */
-public enum TipoSRO {
+public enum TipoSro {
     AL("AL", "AGENTES DE LEITURA "),
     AR("AR", "AVISO DE RECEBIMENTO "),
-    AS("AS", "ENCOMENDA PAC – AÇÃO SOCIAL "),
+    AS("AS", "ENCOMENDA PAC – ACAO SOCIAL "),
     CA("CA", "OBJETO INTERNACIONAL "),
     CB("CB", "OBJETO INTERNACIONAL "),
     CC("CC", "COLIS POSTAUX "),
@@ -35,18 +35,18 @@ public enum TipoSRO {
     CZ("CZ", "OBJETO INTERNACIONAL "),
     DA("DA", "REM EXPRES COM AR DIGITAL "),
     DB("DB", "REM EXPRES COM AR DIGITAL BRADESCO "),
-    DC("DC", "REM EXPRESSA CRLV/CRV/CNH e NOTIFICAÇÃO "),
+    DC("DC", "REM EXPRESSA CRLV/CRV/CNH e NOTIFICACAO "),
     DD("DD", "DEVOLUÇÃO DE DOCUMENTOS "),
     DE("DE", "REMESSA EXPRESSA TALÃO E CARTÃO C/ AR "),
-    DF("DF", "E-SEDEX (LÓGICO) "),
+    DF("DF", "E-SEDEX (LOGICO) "),
     DG("DG", "SEDEX "),
     DI("DI", "REM EXPRES COM AR DIGITAL ITAU "),
-    DL("DL", "ENCOMENDA SEDEX (LÓGICO) "),
+    DL("DL", "ENCOMENDA SEDEX (LOGICO) "),
     DM("DM", "e-SEDEX "),
     DP("DP", "REM EXPRES COM AR DIGITAL PRF "),
     DS("DS", "REM EXPRES COM AR DIGITAL SANTANDER "),
     DT("DT", "REMESSA ECON.SEG.TRANSITO C/AR DIGITAL "),
-    DX("DX", "ENCOMENDA SEDEX 10 (LÓGICO) "),
+    DX("DX", "ENCOMENDA SEDEX 10 (LOGICO) "),
     EA("EA", "OBJETO INTERNACIONAL "),
     EB("EB", "OBJETO INTERNACIONAL "),
     EC("EC", "ENCOMENDA PAC "),
@@ -73,7 +73,7 @@ public enum TipoSRO {
     EX("EX", "OBJETO INTERNACIONAL "),
     EY("EY", "OBJETO INTERNACIONAL "),
     EZ("EZ", "OBJETO INTERNACIONAL "),
-    FA("FA", "FAC REGISTRATO (LÓGICO) "),
+    FA("FA", "FAC REGISTRATO (LOGICO) "),
     FE("FE", "ENCOMENDA FNDE "),
     FF("FF", "REGISTRADO DETRAN "),
     FH("FH", "REGISTRADO FAC COM AR DIGITAL "),
@@ -91,22 +91,22 @@ public enum TipoSRO {
     IP("IP", "INTEGRADA PROGRAMADA "),
     IR("IR", "IMPRESSO REGISTRADO "),
     IS("IS", "INTEGRADA STANDARD "),
-    IT("IT", "INTEGRADO TERMOLÁBIL "),
+    IT("IT", "INTEGRADO TERMOLABIL "),
     IU("IU", "INTEGRADA URGENTE "),
     JA("JA", "REMESSA ECONOMICA C/AR DIGITAL "),
     JB("JB", "REMESSA ECONOMICA C/AR DIGITAL "),
     JC("JC", "REMESSA ECONOMICA C/AR DIGITAL "),
     JD("JD", "REMESSA ECONÔMICA S/ AR DIGITAL "),
     JE("JE", "REMESSA ECONÔMICA C/ AR DIGITAL "),
-    JG("JG", "REGISTRATO AGÊNCIA (FÍSICO) "),
+    JG("JG", "REGISTRATO AGENCIA (FISICO) "),
     JJ("JJ", "REGISTRADO JUSTIÇA "),
-    JL("JL", "OBJETO REGISTRADO (LÓGICO) "),
-    JM("JM", "MALA DIRETA POSTAL ESPECIAL (LÓGICO) "),
-    LA("LA", "LOGÍSTICA REVERSA SIMULTÂNEA - ENCOMENDA SEDEX (AGÊNCIA) "),
-    LB("LB", "LOGÍSTICA REVERSA SIMULTÂNEA - ENCOMENDA e-SEDEX (AGÊNCIA)"),
+    JL("JL", "OBJETO REGISTRADO (LOGICO) "),
+    JM("JM", "MALA DIRETA POSTAL ESPECIAL (LOGICO) "),
+    LA("LA", "LOGISTICA REVERSA SIMULTANEA - ENCOMENDA SEDEX (AGENCIA) "),
+    LB("LB", "LOGISTICA REVERSA SIMULTANEA - ENCOMENDA e-SEDEX (AGENCIA)"),
     LC("LC", "CARTA EXPRESSA "),
-    LE("LE", "LOGÍSTICA REVERSA ECONOMICA "),
-    LP("LP", "LOGÍSTICA REVERSA SIMULTÂNEA - ENCOMENDA PAC (AGÊNCIA) "),
+    LE("LE", "LOGISTICA REVERSA ECONOMICA "),
+    LP("LP", "LOGISTICA REVERSA SIMULTANEA - ENCOMENDA PAC (AGENCIA) "),
     LS("LS", "LOGISTICA REVERSA SEDEX "),
     LV("LV", "LOGISTICA REVERSA EXPRESSA "),
     LX("LX", "CARTA EXPRESSA "),
@@ -130,59 +130,59 @@ public enum TipoSRO {
     PD("PD", "ENCOMENDA PAC - NÃO URGENTE "),
     PE("PE", "PAC "),
     PF("PF", "PASSAPORTE "),
-    PG("PG", "ENCOMENDA PAC (ETIQUETA FÍSICA) "),
-    PH("PH", "ENCOMENDA PAC (ETIQUETA LÓGICA) "),
+    PG("PG", "ENCOMENDA PAC (ETIQUETA FISICA) "),
+    PH("PH", "ENCOMENDA PAC (ETIQUETA LOGICA) "),
     PI("PI", "PAC "),
     PR("PR", "REEMBOLSO POSTAL - CLIENTE AVULSO "),
-    RA("RA", "REGISTRADO PRIORITÁRIO "),
+    RA("RA", "REGISTRADO PRIORITARIO "),
     RB("RB", "CARTA REGISTRADA "),
     RC("RC", "CARTA REGISTRADA COM VALOR DECLARADO "),
     RD("RD", "REMESSA ECONOMICA DETRAN "),
-    RE("RE", "REGISTRADO ECONÔMICO "),
+    RE("RE", "REGISTRADO ECONOMICO "),
     RF("RF", "OBJETO DA RECEITA FEDERAL "),
     RG("RG", "REGISTRADO DO SISTEMA SARA "),
     RH("RH", "REGISTRADO COM AR DIGITAL "),
     RI("RI", "REGISTRADO "),
-    RJ("RJ", "REGISTRADO AGÊNCIA "),
-    RK("RK", "REGISTRADO AGÊNCIA "),
-    RL("RL", "REGISTRADO LÓGICO "),
-    RM("RM", "REGISTRADO AGÊNCIA "),
-    RN("RN", "REGISTRADO AGÊNCIA "),
-    RO("RO", "REGISTRADO AGÊNCIA "),
+    RJ("RJ", "REGISTRADO AGENCIA "),
+    RK("RK", "REGISTRADO AGENCIA "),
+    RL("RL", "REGISTRADO LOGICO "),
+    RM("RM", "REGISTRADO AGENCIA "),
+    RN("RN", "REGISTRADO AGENCIA "),
+    RO("RO", "REGISTRADO AGENCIA "),
     RP("RP", "REEMBOLSO POSTAL - CLIENTE INSCRITO "),
-    RQ("RQ", "REGISTRADO AGÊNCIA "),
+    RQ("RQ", "REGISTRADO AGENCIA "),
     RR("RR", "CARTA REGISTRADA SEM VALOR DECLARADO "),
-    RS("RS", "REGISTRADO LÓGICO "),
+    RS("RS", "REGISTRADO LOGICO "),
     RT("RT", "REM ECON TALAO/CARTAO SEM AR DIGITAL "),
     RU("RU", "REGISTRADO SERVIÇO ECT "),
     RV("RV", "REM ECON CRLV/CRV/CNH COM AR DIGITAL "),
     RY("RY", "REM ECON TALAO/CARTAO COM AR DIGITAL "),
     RZ("RZ", "REGISTRADO "),
     SA("SA", "SEDEX ANOREG "),
-    SB("SB", "SEDEX 10 AGÊNCIA (FÍSICO) "),
+    SB("SB", "SEDEX 10 AGENCIA (FISICO) "),
     SC("SC", "SEDEX A COBRAR "),
     SD("SD", "REMESSA EXPRESSA DETRAN "),
     SE("SE", "ENCOMENDA SEDEX "),
-    SF("SF", "SEDEX AGÊNCIA "),
+    SF("SF", "SEDEX AGENCIA "),
     SG("SG", "SEDEX DO SISTEMA SARA "),
-    SI("SI", "SEDEX AGÊNCIA "),
+    SI("SI", "SEDEX AGENCIA "),
     SJ("SJ", "SEDEX HOJE "),
-    SK("SK", "SEDEX AGÊNCIA "),
-    SL("SL", "SEDEX LÓGICO "),
+    SK("SK", "SEDEX AGENCIA "),
+    SL("SL", "SEDEX LOGICO "),
     SM("SM", "SEDEX MESMO DIA "),
     SN("SN", "SEDEX COM VALOR DECLARADO "),
-    SO("SO", "SEDEX AGÊNCIA "),
+    SO("SO", "SEDEX AGENCIA "),
     SP("SP", "SEDEX PRÉ-FRANQUEADO "),
     SQ("SQ", "SEDEX "),
     SR("SR", "SEDEX "),
-    SS("SS", "SEDEX FÍSICO "),
+    SS("SS", "SEDEX FISICO "),
     ST("ST", "REM EXPRES TALAO/CARTAO SEM AR DIGITAL "),
     SU("SU", "ENCOMENDA SERVIÇO EXPRESSA ECT "),
     SV("SV", "REM EXPRES CRLV/CRV/CNH COM AR DIGITAL "),
     SW("SW", "e-SEDEX "),
     SX("SX", "SEDEX 10 "),
     SY("SY", "REM EXPRES TALAO/CARTAO COM AR DIGITAL "),
-    SZ("SZ", "SEDEX AGÊNCIA "),
+    SZ("SZ", "SEDEX AGENCIA "),
     TE("TE", "TESTE (OBJETO PARA TREINAMENTO) "),
     TS("TS", "TESTE (OBJETO PARA TREINAMENTO) "),
     VA("VA", "ENCOMENDAS COM VALOR DECLARADO "),
@@ -197,16 +197,16 @@ public enum TipoSRO {
     private String codigo;
     private String descricao;
 
-    private TipoSRO(String codigo, String descricao) {
+    private TipoSro(String codigo, String descricao) {
         this.codigo = codigo;
         this.descricao = descricao;
     }
 
-    public static TipoSRO obterPorCodigo(String codigo) {
+    public static TipoSro obterPorCodigo(String codigo) {
         if (DM.codigo.equals(codigo)) {
             return DM;
         }
-        for (TipoSRO tipo : values()) {
+        for (TipoSro tipo : values()) {
             if (tipo.codigo.equals(codigo)) {
                 return tipo;
             }
@@ -214,4 +214,11 @@ public enum TipoSRO {
         return null;
     }
 
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public String getCodigo() {
+        return codigo;
+    }
 }

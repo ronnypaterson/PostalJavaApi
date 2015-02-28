@@ -5,20 +5,20 @@ import org.apache.commons.lang3.StringUtils;
 /**
  * Created by alex on 22/02/2015.
  */
-public class SRO {
-    private final TipoSRO codigoServico;
+public class Sro {
+    private final TipoSro codigoServico;
     private final Integer numero;
     private final Integer digitoVerificador;
     private final String paisOrigem;
 
-    SRO(TipoSRO codigoServico, Integer numero, Integer digitoVerificador, String paisOrigem) {
+    Sro(TipoSro codigoServico, Integer numero, Integer digitoVerificador, String paisOrigem) {
         this.codigoServico = codigoServico;
         this.numero = numero;
         this.paisOrigem = paisOrigem;
         this.digitoVerificador = digitoVerificador;
     }
 
-    public boolean isValid() throws SROInvalidoException{
+    public boolean isValid() throws SroInvalidoException {
         return digitoVerificador.equals(calcularDv());
     }
     public int calcularDv (){
@@ -55,7 +55,7 @@ public class SRO {
         return digitoVerificador;
     }
 
-    public TipoSRO getCodigoServico() {
+    public TipoSro getCodigoServico() {
         return codigoServico;
     }
 
@@ -65,5 +65,10 @@ public class SRO {
 
     public String getPaisOrigem() {
         return paisOrigem;
+    }
+
+    @Override
+    public String toString() {
+        return getCodigoServico().getCodigo()+getNumero()+getDigitoVerificador()+getPaisOrigem();
     }
 }
