@@ -1,4 +1,4 @@
-package br.com.alexpfx.api.postal;
+package br.com.alexpfx.api.postal.dao;
 
 import java.util.Date;
 
@@ -33,5 +33,15 @@ public class SroRetornoInfo {
 
     public String getAcao() {
         return acao;
+    }
+
+    @Override
+    public String toString() {
+        return "SroRetornoInfo{" +
+                "data=" + data +
+                ", local='" + local + '\'' +
+                ", acao='" + acao + '\'' +
+                ", detalhes='" + detalhes + '\'' +
+                '}';
     }
 }

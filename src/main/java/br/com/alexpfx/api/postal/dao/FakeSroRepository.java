@@ -1,4 +1,7 @@
-package br.com.alexpfx.api.postal;
+package br.com.alexpfx.api.postal.dao;
+
+import br.com.alexpfx.api.postal.Sro;
+import br.com.alexpfx.api.postal.SroFactory;
 
 import java.util.*;
 
