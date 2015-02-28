@@ -11,6 +11,8 @@ public class Sro {
     private final Integer digitoVerificador;
     private final String paisOrigem;
 
+
+    //fafasf
     Sro(TipoSro codigoServico, Integer numero, Integer digitoVerificador, String paisOrigem) {
         this.codigoServico = codigoServico;
         this.numero = numero;
