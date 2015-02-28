@@ -35,6 +35,7 @@ public class SroFactory {
             throw new SroInvalidoException("numero com formato invalido");
         }
     }
+    ///
     private Integer obterNumero(String sro) {
         try {
             return Integer.valueOf(sro.substring(2, 10));

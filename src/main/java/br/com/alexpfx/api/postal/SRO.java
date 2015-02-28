@@ -17,7 +17,7 @@ public class Sro {
         this.paisOrigem = paisOrigem.toUpperCase();
         this.digitoVerificador = digitoVerificador;
     }
-//teste
+//x
     public boolean isValid() throws SroInvalidoException {
         return digitoVerificador.equals(calcularDv());
     }

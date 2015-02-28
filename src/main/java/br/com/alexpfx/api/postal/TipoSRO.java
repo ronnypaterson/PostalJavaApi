@@ -200,8 +200,10 @@ public enum TipoSro {
     private TipoSro(String codigo, String descricao) {
         this.codigo = codigo;
         this.descricao = descricao;
+
     }
 
+    //
     public static TipoSro obterPorCodigo(String codigo) {
         if (DM.codigo.equals(codigo.toUpperCase())) {
             return DM;
