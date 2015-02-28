@@ -203,7 +203,7 @@ public enum TipoSro {
     }
 
     public static TipoSro obterPorCodigo(String codigo) {
-        if (DM.codigo.equals(codigo)) {
+        if (DM.codigo.equals(codigo.toUpperCase())) {
             return DM;
         }
         for (TipoSro tipo : values()) {
