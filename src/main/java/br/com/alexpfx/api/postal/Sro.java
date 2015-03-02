@@ -1,6 +1,6 @@
 package br.com.alexpfx.api.postal;
 
-import org.apache.commons.lang3.StringUtils;
+import com.google.common.base.Strings;
 
 /**
  * Created by alex on 22/02/2015.
@@ -44,7 +44,8 @@ public class Sro {
 
     private int [] toIntArray (int n, int minSize){
 
-        String s = StringUtils.leftPad(String.valueOf(n), minSize, '0');
+        String s = Strings.padStart(String.valueOf(n), minSize, '0');
+//        String s = StringUtils.leftPad(String.valueOf(n), minSize, '0');
         int c = 0;
         int [] ar = new int [s.length()];
         for (char ch:s.toCharArray()){
