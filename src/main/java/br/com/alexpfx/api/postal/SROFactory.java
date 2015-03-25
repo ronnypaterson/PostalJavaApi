@@ -60,7 +60,7 @@ public class SroFactory {
             throw new SroInvalidoException("tamanho string sro invalida");
     }
 
-    public Sro criar(String codigoRastreamento) {
+    public Sro criar(String codigoRastreamento) throws SroInvalidoException{
         return criarSROValidado(codigoRastreamento);
     }
 
@@ -74,9 +74,11 @@ public class SroFactory {
                 Sro criado = factory.criar(s);
                 lista.add(criado);
             } catch (SroInvalidoException e) {
-                System.out.println(s);
-                //logar
+
             }
+        }
+        if (lista.isEmpty()){
+            throw new NenhumSroValidoException("Não encontrados SROs válidos na String fornecida: "+codigosRastreamento);
         }
         return lista;
     }

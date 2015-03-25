@@ -110,8 +110,11 @@ public class SroFactoryTest {
         assertEquals(sros.size(), 60);
     }
 
-
-
+    @Test(expected = NenhumSroValidoException.class)
+    public void testTriarListaDescartarInvalidos_nenhumValido(){
+        String cds = "fafa";
+        List<Sro> sros = factory.criarListaDescartarInvalidos(cds);
+    }
 
 
 
