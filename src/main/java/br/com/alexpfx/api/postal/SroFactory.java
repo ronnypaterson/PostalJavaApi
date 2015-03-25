@@ -64,7 +64,7 @@ public class SroFactory {
         return criarSROValidado(codigoRastreamento);
     }
 
-    public List<Sro> criarListaDescartarInvalidos(String codigosRastreamento) {
+    public List<Sro> criarListaDescartarInvalidos(String codigosRastreamento) throws NenhumSroValidoException{
         String codigosSemBrancos = filtrarBrancos(codigosRastreamento);
         SroFactory factory = new SroFactory();
         Iterable<String> splitted = Splitter.fixedLength(TAMANHO_PADRAO).omitEmptyStrings().split(codigosSemBrancos);
