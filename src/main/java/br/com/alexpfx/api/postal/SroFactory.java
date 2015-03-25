@@ -60,7 +60,7 @@ public class SroFactory {
             throw new SroInvalidoException("tamanho string sro invalida");
     }
 
-    public Sro criar(String codigoRastreamento) {
+    public Sro criar(String codigoRastreamento) throws SroInvalidoException{
         return criarSROValidado(codigoRastreamento);
     }
 
