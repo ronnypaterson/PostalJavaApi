@@ -6,7 +6,7 @@ import com.google.common.base.Splitter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SroFactory {
+public class SroFactory implements SroFactoryInterface{
 
     private static final int TAMANHO_PADRAO = 13;
 
@@ -60,10 +60,12 @@ public class SroFactory {
             throw new SroInvalidoException("tamanho string sro invalida");
     }
 
+    @Override
     public Sro criar(String codigoRastreamento) throws SroInvalidoException{
         return criarSROValidado(codigoRastreamento);
     }
 
+    @Override
     public List<Sro> criarListaDescartarInvalidos(String codigosRastreamento) throws NenhumSroValidoException{
         String codigosSemBrancos = filtrarBrancos(codigosRastreamento);
         SroFactory factory = new SroFactory();
@@ -74,7 +76,7 @@ public class SroFactory {
                 Sro criado = factory.criar(s);
                 lista.add(criado);
             } catch (SroInvalidoException e) {
-
+                //descartando invalidos
             }
         }
         if (lista.isEmpty()){
