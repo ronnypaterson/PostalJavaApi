@@ -28,11 +28,11 @@ public class AgenciaIdeiaRepository implements SroRepository {
 
 
     @Override
-    public List<SroRetornoInfo> consultarSro(Sro sro) throws InfraException {
+    public List<SroRetornoInfo> consultarSro(String sro) throws InfraException {
         Gson gson = new GsonBuilder().setDateFormat("dd/MM/yyyy HH:mm").create();
         String respostaFromUrl = null;
         try {
-            respostaFromUrl = callURL(CALL_URL + sro.toString(), timeout);
+            respostaFromUrl = callURL(CALL_URL + sro, timeout);
         } catch (SocketTimeoutException e) {
             throw new InfraException("Erro de timeout ao tentar buscar resultado por codigo: " + sro.toString(), e);
         }

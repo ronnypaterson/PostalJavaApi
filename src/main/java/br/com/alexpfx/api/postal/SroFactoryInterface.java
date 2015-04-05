@@ -9,6 +9,7 @@ public interface SroFactoryInterface {
 
     /**
      * Cria uma Sro válida a partir de um código de rastreamento. Se o código for inválido, lança uma SroInvalidoException.
+     *
      * @param codigoRastreamento
      * @return
      * @throws SroInvalidoException
@@ -19,11 +20,11 @@ public interface SroFactoryInterface {
     /**
      * Cria uma lista de Sros a partir de string que pode representar vários códigos de rastremaneto. Caso neste string não haja
      * nenhum código válido, lança uma NenhumSroValidoException.
+     *
      * @param codigosRastreamento
      * @return
      * @throws NenhumSroValidoException
      */
     List<Sro> criarListaDescartarInvalidos(String codigosRastreamento) throws NenhumSroValidoException;
-
 
 }

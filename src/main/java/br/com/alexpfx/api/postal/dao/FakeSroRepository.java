@@ -9,13 +9,13 @@ import java.util.*;
  * Created by alex on 26/02/2015.
  */
 public class FakeSroRepository implements SroRepository {
-    private Map<Sro, List<SroRetornoInfo>> map;
+    private Map<String, List<SroRetornoInfo>> map;
 
 
     public FakeSroRepository() {
         this.map = new HashMap<>();
-        map.put(new SroFactory().criar("DM180464317BR"), criarLista());
-        map.put(new SroFactory().criar("DM180638790BR"), criarLista());
+        map.put(new SroFactory().criar("DM180464317BR").toString(), criarLista());
+        map.put(new SroFactory().criar("DM180638790BR").toString(), criarLista());
     }
 
     private List<SroRetornoInfo> criarLista() {
@@ -26,7 +26,7 @@ public class FakeSroRepository implements SroRepository {
     }
 
     @Override
-    public List<SroRetornoInfo> consultarSro(Sro sro) throws InfraException {
+    public List<SroRetornoInfo> consultarSro(String sro) throws InfraException {
         List<SroRetornoInfo> retorno = map.get(sro);
         return retorno;
     }

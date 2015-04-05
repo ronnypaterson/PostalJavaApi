@@ -17,13 +17,13 @@ public class AgenciaIdeiaRepositoryTest {
     @Test
     public void testConsultarSro_ObjetoValido() throws Exception {
         Sro sro = new SroFactory().criar("SS123456789BR");
-        repository.consultarSro(sro);
+        repository.consultarSro(sro.toString());
     }
 
     @Test(expected = InfraException.class)
     public void testConsultarSro_ObjetoNaoExiste() throws Exception {
         Sro sro = new SroFactory().criar("SS123101121BR");
-        repository.consultarSro(sro);
+        repository.consultarSro(sro.toString());
     }
 
     @Test(expected = InfraException.class)
@@ -31,7 +31,7 @@ public class AgenciaIdeiaRepositoryTest {
         repository = new AgenciaIdeiaRepository();
         repository.setTimeout(100);
         Sro sro = new SroFactory().criar("SS123456789BR");
-        repository.consultarSro(sro);
+        repository.consultarSro(sro.toString());
     }
 
     @After
