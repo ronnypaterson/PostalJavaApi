@@ -1,7 +1,6 @@
 package br.com.alexpfx.api.postal.dao;
 
-import br.com.alexpfx.api.postal.Sro;
-import br.com.alexpfx.api.postal.SroFactory;
+import br.com.alexpfx.api.postal.SROFactory;
 
 import java.util.*;
 
@@ -14,8 +13,8 @@ public class FakeSroRepository implements SroRepository {
 
     public FakeSroRepository() {
         this.map = new HashMap<>();
-        map.put(new SroFactory().criar("DM180464317BR").toString(), criarLista());
-        map.put(new SroFactory().criar("DM180638790BR").toString(), criarLista());
+        map.put(new SROFactory().criar("DM180464317BR").toString(), criarLista());
+        map.put(new SROFactory().criar("DM180638790BR").toString(), criarLista());
     }
 
     private List<SroRetornoInfo> criarLista() {

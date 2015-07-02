@@ -8,23 +8,23 @@ import java.util.List;
 public interface SroFactoryInterface {
 
     /**
-     * Cria uma Sro válida a partir de um código de rastreamento. Se o código for inválido, lança uma SroInvalidoException.
+     * Cria uma Sro vï¿½lida a partir de um cï¿½digo de rastreamento. Se o cï¿½digo for invï¿½lido, lanï¿½a uma SroInvalidoException.
      *
      * @param codigoRastreamento
      * @return
-     * @throws SroInvalidoException
+     * @throws SROInvalidoException
      */
-    Sro criar(String codigoRastreamento) throws SroInvalidoException;
+    SRO criar(String codigoRastreamento) throws SROInvalidoException;
 
 
     /**
-     * Cria uma lista de Sros a partir de string que pode representar vários códigos de rastremaneto. Caso neste string não haja
-     * nenhum código válido, lança uma NenhumSroValidoException.
+     * Cria uma lista de Sros a partir de string que pode representar vï¿½rios cï¿½digos de rastremaneto. Caso neste string nï¿½o haja
+     * nenhum cï¿½digo vï¿½lido, lanï¿½a uma NenhumSroValidoException.
      *
      * @param codigosRastreamento
      * @return
      * @throws NenhumSroValidoException
      */
-    List<Sro> criarListaDescartarInvalidos(String codigosRastreamento) throws NenhumSroValidoException;
+    List<SRO> criarListaDescartarInvalidos(String codigosRastreamento) throws NenhumSroValidoException;
 
 }

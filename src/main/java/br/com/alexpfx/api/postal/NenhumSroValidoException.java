@@ -5,7 +5,12 @@ package br.com.alexpfx.api.postal;
  */
 public class NenhumSroValidoException extends RuntimeException {
 
-    public NenhumSroValidoException() {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public NenhumSroValidoException() {
 
     }
 

@@ -5,22 +5,22 @@ import com.google.common.base.Strings;
 /**
  * Created by alex on 22/02/2015.
  */
-public class Sro {
-    private final TipoSro codigoServico;
+public class SRO {
+    private final TipoSRO codigoServico;
     private final Integer numero;
     private final Integer digitoVerificador;
     private final String paisOrigem;
 
 
     //fafasf
-    Sro(TipoSro codigoServico, Integer numero, Integer digitoVerificador, String paisOrigem) {
+    SRO(TipoSRO codigoServico, Integer numero, Integer digitoVerificador, String paisOrigem) {
         this.codigoServico = codigoServico;
         this.numero = numero;
         this.paisOrigem = paisOrigem.toUpperCase();
         this.digitoVerificador = digitoVerificador;
     }
 //x
-    public boolean isValid() throws SroInvalidoException {
+    public boolean isValid() throws SROInvalidoException {
         return digitoVerificador.equals(calcularDv());
     }
     public int calcularDv (){
@@ -58,7 +58,7 @@ public class Sro {
         return digitoVerificador;
     }
 
-    public TipoSro getCodigoServico() {
+    public TipoSRO getCodigoServico() {
         return codigoServico;
     }
 
@@ -76,7 +76,7 @@ public class Sro {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Sro sro = (Sro) o;
+        SRO sro = (SRO) o;
 
         if (codigoServico != sro.codigoServico) return false;
         if (digitoVerificador != null ? !digitoVerificador.equals(sro.digitoVerificador) : sro.digitoVerificador != null)

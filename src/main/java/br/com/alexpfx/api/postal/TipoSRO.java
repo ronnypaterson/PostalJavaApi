@@ -3,7 +3,7 @@ package br.com.alexpfx.api.postal;
 /**
  * Created by alex on 22/02/2015.
  */
-public enum TipoSro {
+public enum TipoSRO {
     AL("AL", "AGENTES DE LEITURA "),
     AR("AR", "AVISO DE RECEBIMENTO "),
     AS("AS", "ENCOMENDA PAC – ACAO SOCIAL "),
@@ -197,18 +197,18 @@ public enum TipoSro {
     private String codigo;
     private String descricao;
 
-    private TipoSro(String codigo, String descricao) {
+    private TipoSRO(String codigo, String descricao) {
         this.codigo = codigo;
         this.descricao = descricao;
 
     }
 
     //
-    public static TipoSro obterPorCodigo(String codigo) {
+    public static TipoSRO obterPorCodigo(String codigo) {
         if (DM.codigo.equals(codigo.toUpperCase())) {
             return DM;
         }
-        for (TipoSro tipo : values()) {
+        for (TipoSRO tipo : values()) {
             if (tipo.codigo.equals(codigo)) {
                 return tipo;
             }

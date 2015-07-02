@@ -1,7 +1,5 @@
 package br.com.alexpfx.api.postal.dao;
 
-import br.com.alexpfx.api.postal.Sro;
-
 import java.util.List;
 
 /**

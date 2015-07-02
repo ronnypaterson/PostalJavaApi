@@ -7,7 +7,12 @@ package br.com.alexpfx.api.postal.dao;
 public class InfraException extends RuntimeException {
 
 
-    public InfraException() {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public InfraException() {
     }
 
     public InfraException(String message, Throwable cause) {

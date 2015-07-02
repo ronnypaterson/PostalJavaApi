@@ -3,11 +3,15 @@ package br.com.alexpfx.api.postal;
 /**
  * Created by alex on 22/02/2015.
  */
-public class SroInvalidoException extends RuntimeException{
-    public SroInvalidoException(){
+public class SROInvalidoException extends RuntimeException{
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	public SROInvalidoException(){
         super ("SRO Invalido");
     }
-    public SroInvalidoException(String message){
+    public SROInvalidoException(String message){
         super ("SRO Invalido: "+message);
     }
 

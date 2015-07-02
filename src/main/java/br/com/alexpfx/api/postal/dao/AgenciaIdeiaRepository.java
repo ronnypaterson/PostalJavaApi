@@ -1,6 +1,5 @@
 package br.com.alexpfx.api.postal.dao;
 
-import br.com.alexpfx.api.postal.Sro;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonSyntaxException;

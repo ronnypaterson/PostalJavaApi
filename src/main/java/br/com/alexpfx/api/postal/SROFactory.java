@@ -6,7 +6,7 @@ import com.google.common.base.Splitter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SroFactory implements SroFactoryInterface{
+public class SROFactory implements SroFactoryInterface{
 
     private static final int TAMANHO_PADRAO = 13;
 
@@ -14,14 +14,14 @@ public class SroFactory implements SroFactoryInterface{
     private String filtrarBrancos (String s){
         return CharMatcher.WHITESPACE.removeFrom(s);
     }
-    private Sro criarSROValidado(String sro) {
+    private SRO criarSROValidado(String sro) {
         String sroSemBrancos = filtrarBrancos(sro);
         validarTamanho(sroSemBrancos);
-        TipoSro tipo = obterTipoServico(sroSemBrancos);
+        TipoSRO tipo = obterTipoServico(sroSemBrancos);
         Integer numero = obterNumero(sroSemBrancos);
         Integer dv = obterDv(sroSemBrancos);
         String pais = obterPais(sroSemBrancos);
-        return new Sro(tipo, numero, dv, pais);
+        return new SRO(tipo, numero, dv, pais);
     }
 
 
@@ -30,10 +30,10 @@ public class SroFactory implements SroFactoryInterface{
     }
 
 
-    private TipoSro obterTipoServico(String sro) {
-        TipoSro tipo = TipoSro.obterPorCodigo(sro.substring(0, 2));
+    private TipoSRO obterTipoServico(String sro) {
+        TipoSRO tipo = TipoSRO.obterPorCodigo(sro.substring(0, 2));
         if (tipo == null) {
-            throw new SroInvalidoException("codigo de servico invalido");
+            throw new SROInvalidoException("codigo de servico invalido");
         }
         return tipo;
     }
@@ -42,7 +42,7 @@ public class SroFactory implements SroFactoryInterface{
         try {
             return Integer.valueOf(sro.substring(10, 11));
         } catch (NumberFormatException e) {
-            throw new SroInvalidoException("numero com formato invalido");
+            throw new SROInvalidoException("numero com formato invalido");
         }
     }
 
@@ -51,31 +51,31 @@ public class SroFactory implements SroFactoryInterface{
         try {
             return Integer.valueOf(sro.substring(2, 10));
         } catch (NumberFormatException e) {
-            throw new SroInvalidoException("numero com formato invalido");
+            throw new SROInvalidoException("numero com formato invalido");
         }
     }
 
     private void validarTamanho(String sro) {
         if (sro == null || sro.length() != TAMANHO_PADRAO)
-            throw new SroInvalidoException("tamanho string sro invalida");
+            throw new SROInvalidoException("tamanho string sro invalida");
     }
 
     @Override
-    public Sro criar(String codigoRastreamento) throws SroInvalidoException{
+    public SRO criar(String codigoRastreamento) throws SROInvalidoException{
         return criarSROValidado(codigoRastreamento);
     }
 
     @Override
-    public List<Sro> criarListaDescartarInvalidos(String codigosRastreamento) throws NenhumSroValidoException{
+    public List<SRO> criarListaDescartarInvalidos(String codigosRastreamento) throws NenhumSroValidoException{
         String codigosSemBrancos = filtrarBrancos(codigosRastreamento);
-        SroFactory factory = new SroFactory();
+        SROFactory factory = new SROFactory();
         Iterable<String> splitted = Splitter.fixedLength(TAMANHO_PADRAO).omitEmptyStrings().split(codigosSemBrancos);
-        List<Sro> lista = new ArrayList<>();
+        List<SRO> lista = new ArrayList<>();
         for (String s : splitted) {
             try {
-                Sro criado = factory.criar(s);
+                SRO criado = factory.criar(s);
                 lista.add(criado);
-            } catch (SroInvalidoException e) {
+            } catch (SROInvalidoException e) {
                 //descartando invalidos
             }
         }
